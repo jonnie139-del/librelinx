@@ -1,0 +1,63 @@
+stages:
+  - build
+  - lint
+  - codequality
+
+variables:
+  GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
+
+before_script:
+  # Ensure Gradle wrapper is executable
+  - chmod +x ./gradlew
+  - export PATH="$CI_PROJECT_DIR/gradlew:$PATH"
+
+# --------------------
+# Build stage
+# --------------------
+build_app:
+  stage: build
+  image: openjdk:11
+  script:
+    - echo "Building LibreLynx Lite APK..."
+    - ./gradlew assembleDebug
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+# --------------------
+# Lint stage
+# --------------------
+lint_checks:
+  stage: lint
+  image: openjdk:11
+  script:
+    - echo "Running lint checks..."
+    - ./gradlew lint
+    - ./gradlew fdroidLint
+    - ./gradlew checkUpdates
+  artifacts:
+    paths:
+      - app/build/reports/
+      - app/build/outputs/lint-results.xml
+
+# --------------------
+# Code Quality stage
+# --------------------
+codequality:
+  stage: codequality
+  image: stedolan/jq:latest
+  script:
+    - echo "Generating codequality.json..."
+    - bash -c '
+        shopt -s nullglob
+        json_files=(app/build/reports/**/*.json)
+        if [ ${#json_files[@]} -gt 0 ]; then
+            jq "[.[]|.[]]" --slurp "${json_files[@]}" > codequality.json
+        else
+            echo "No JSON files found, creating empty codequality.json"
+            echo "[]" > codequality.json
+        fi
+      '
+  artifacts:
+    paths:
+      - codequality.json
