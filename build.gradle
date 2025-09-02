@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.librelynx.lite'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.librelynx.lite"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0-lite"
+        resConfigs "en", "xxhdpi"
+    }
+    
+    signingConfigs {
+        debug {
+            // Android will automatically use the default debug keystore
+        }
+        release {
+            storeFile file("../librelynx.keystore")
+            storePassword "186365"
+            keyAlias "librelynx_key"
+            keyPassword "186365"
+        }
+    }
+    
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debug
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    // Only use splits for release builds to reduce complexity during development
+    splits {
+        abi {
+            enable project.hasProperty('enableSplits') ? project.enableSplits.toBoolean() : false
+            reset()
+            include 'arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'
+            universalApk true
+        }
+    }
+    
+    // Simplified output naming
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def versionName = variant.versionName
+            def buildType = variant.buildType.name
+            def abi = getFilter(com.android.build.OutputFile.ABI)
+            if (abi != null) {
+                outputFileName = "LibreLynx-Lite-${versionName}-${buildType}-${abi}.apk"
+            } else {
+                outputFileName = "LibreLynx-Lite-${versionName}-${buildType}.apk"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.webkit:webkit:1.8.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

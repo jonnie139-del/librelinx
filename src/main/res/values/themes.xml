@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base dialog style -->
+    <style name="AppTheme.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle.Positive</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle.Negative</item>
+        <item name="android:background">?attr/main_background_color</item>
+        <item name="android:textColorPrimary">?attr/dialog_text_color</item>
+    </style>
+
+    <!-- Positive button style -->
+    <style name="DialogButtonStyle.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/dialogButtonTextColorPositive</item>
+    </style>
+
+    <!-- Negative button style -->
+    <style name="DialogButtonStyle.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/dialogButtonTextColorNegative</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="AppTheme.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_nav_bar_background_color</item>
+        <item name="colorPrimaryVariant">@color/dark_nav_button_background_color</item>
+        <item name="colorOnPrimary">@color/dark_text_color</item>
+        <item name="colorSecondary">@color/dark_swipe_color_1</item>
+        <item name="colorSecondaryVariant">@color/dark_swipe_color_2</item>
+        <item name="android:statusBarColor">@color/dark_nav_bar_background_color</item>
+        <item name="nav_bar_background_color">@color/dark_nav_bar_background_color</item>
+        <item name="nav_button_background_color">@color/dark_nav_button_background_color</item>
+        <item name="main_background_color">@color/dark_main_background_color</item>
+        <item name="text_color">@color/dark_text_color</item>
+        <item name="swipe_color_1">@color/dark_swipe_color_1</item>
+        <item name="swipe_color_2">@color/dark_swipe_color_2</item>
+        <item name="dialogButtonTextColorPositive">#4CAF50</item>
+        <item name="dialogButtonTextColorNegative">#757575</item>
+        <item name="dialog_text_color">@color/dark_dialog_text_color</item>
+    </style>
+
+    <!-- Ocean theme -->
+    <style name="AppTheme.Ocean" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ocean_nav_bar_background_color</item>
+        <item name="colorPrimaryVariant">@color/ocean_nav_button_background_color</item>
+        <item name="colorOnPrimary">@color/ocean_text_color</item>
+        <item name="colorSecondary">@color/ocean_swipe_color_1</item>
+        <item name="colorSecondaryVariant">@color/ocean_swipe_color_2</item>
+        <item name="android:statusBarColor">@color/ocean_nav_bar_background_color</item>
+        <item name="nav_bar_background_color">@color/ocean_nav_bar_background_color</item>
+        <item name="nav_button_background_color">@color/ocean_nav_button_background_color</item>
+        <item name="main_background_color">@color/ocean_main_background_color</item>
+        <item name="text_color">@color/ocean_text_color</item>
+        <item name="swipe_color_1">@color/ocean_swipe_color_1</item>
+        <item name="swipe_color_2">@color/ocean_swipe_color_2</item>
+        <item name="dialogButtonTextColorPositive">#4CAF50</item>
+        <item name="dialogButtonTextColorNegative">#757575</item>
+        <item name="dialog_text_color">@color/ocean_dialog_text_color</item>
+    </style>
+
+    <!-- Forest theme -->
+    <style name="AppTheme.Forest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/forest_nav_bar_background_color</item>
+        <item name="colorPrimaryVariant">@color/forest_nav_button_background_color</item>
+        <item name="colorOnPrimary">@color/forest_text_color</item>
+        <item name="colorSecondary">@color/forest_swipe_color_1</item>
+        <item name="colorSecondaryVariant">@color/forest_swipe_color_2</item>
+        <item name="android:statusBarColor">@color/forest_nav_bar_background_color</item>
+        <item name="nav_bar_background_color">@color/forest_nav_bar_background_color</item>
+        <item name="nav_button_background_color">@color/forest_nav_button_background_color</item>
+        <item name="main_background_color">@color/forest_main_background_color</item>
+        <item name="text_color">@color/forest_text_color</item>
+        <item name="swipe_color_1">@color/forest_swipe_color_1</item>
+        <item name="swipe_color_2">@color/forest_swipe_color_2</item>
+        <item name="dialogButtonTextColorPositive">#4CAF50</item>
+        <item name="dialogButtonTextColorNegative">#757575</item>
+        <item name="dialog_text_color">@color/forest_dialog_text_color</item>
+    </style>
+
+    <!-- Sunset theme -->
+    <style name="AppTheme.Sunset" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sunset_nav_bar_background_color</item>
+        <item name="colorPrimaryVariant">@color/sunset_nav_button_background_color</item>
+        <item name="colorOnPrimary">@color/sunset_text_color</item>
+        <item name="colorSecondary">@color/sunset_swipe_color_1</item>
+        <item name="colorSecondaryVariant">@color/sunset_swipe_color_2</item>
+        <item name="android:statusBarColor">@color/sunset_nav_bar_background_color</item>
+        <item name="nav_bar_background_color">@color/sunset_nav_bar_background_color</item>
+        <item name="nav_button_background_color">@color/sunset_nav_button_background_color</item>
+        <item name="main_background_color">@color/sunset_main_background_color</item>
+        <item name="text_color">@color/sunset_text_color</item>
+        <item name="swipe_color_1">@color/sunset_swipe_color_1</item>
+        <item name="swipe_color_2">@color/sunset_swipe_color_2</item>
+        <item name="dialogButtonTextColorPositive">#4CAF50</item>
+        <item name="dialogButtonTextColorNegative">#757575</item>
+        <item name="dialog_text_color">@color/sunset_dialog_text_color</item>
+    </style>
+</resources>

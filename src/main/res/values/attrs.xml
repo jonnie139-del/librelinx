@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="nav_bar_background_color" format="color" />
+    <attr name="nav_button_background_color" format="color" />
+    <attr name="main_background_color" format="color" />
+    <attr name="text_color" format="color" />
+    <attr name="swipe_color_1" format="color" />
+    <attr name="swipe_color_2" format="color" />
+    <attr name="dialogButtonTextColorPositive" format="color" />
+    <attr name="dialogButtonTextColorNegative" format="color" />
+    <attr name="dialog_text_color" format="color" />
+</resources>

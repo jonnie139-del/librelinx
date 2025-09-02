@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    
+    <!-- Incognito Mode -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Incognito Mode"
+            android:textSize="16sp"
+            android:textColor="#2C3E50" />
+            
+        <Switch
+            android:id="@+id/incognito_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse without saving history, cookies, or form data"
+        android:textSize="12sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="20dp" />
+    
+    <!-- Ad Block -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ad &amp; Tracker Blocking"
+            android:textSize="16sp"
+            android:textColor="#2C3E50" />
+            
+        <Switch
+            android:id="@+id/adblock_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Block ads, trackers, and analytics scripts for faster browsing"
+        android:textSize="12sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="20dp" />
+    
+    <!-- VPN Mode -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="VPN-Ready Mode"
+            android:textSize="16sp"
+            android:textColor="#2C3E50" />
+            
+        <Switch
+            android:id="@+id/vpn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Optimize user agent and settings for VPN usage"
+        android:textSize="12sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="20dp" />
+    
+    <!-- Privacy Notice -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🛡️ LibreLynx is designed with privacy first. We never collect or share your browsing data."
+        android:textSize="14sp"
+        android:textColor="#27AE60"
+        android:background="#E8F5E8"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

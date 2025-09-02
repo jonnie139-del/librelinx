@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreLynx Lite</string>
+    <string name="url_hint">Search or enter URL...</string>
+    <string name="go_button">Go</string>
+    <string name="back_button">Back</string>
+    <string name="forward_button">Forward</string>
+    <string name="back_arrow">&#x25C4;</string>
+<string name="forward_arrow">&#x25BA;</string>
+    <string name="refresh_button">Refresh</string>
+    <string name="settings_button">Settings</string>
+    <string name="refresh_symbol">&#x27F3;</string>
+    <string name="settings_symbol">&#x22EE;</string>
+    <string name="search_engine_title">Choose Search Engine</string>
+    <string name="privacy_notice">🛡️ LibreLynx Lite • Privacy-focused browsing • No tracking</string>
+    <string name="blocked_tracker">Blocked tracking request</string>
+    <string name="search_engine_updated">Search engine updated</string>
+    <string name="loading">Loading...</string>
+    <string name="ready">Ready</string>
+    <string name="enter_url">Please enter a URL or search term</string>
+    <string name="app_logo">App Logo</string>
+    <string name="new_tab">New Tab</string>
+</resources>

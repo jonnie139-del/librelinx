@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Dialog Text -->
+    <color name="active_tab_background">#33FFFFFF</color>
+    <color name="dialog_text_color">#FFFFFF</color>
+
+    <!-- Dark Theme -->
+    <color name="dark_background">#212121</color>
+    <color name="dark_background_alt">#424242</color>
+    <color name="dark_text">#FFFFFF</color>
+    <color name="dark_text_color">#FFFFFF</color>
+    <color name="dark_swipe_color_1">#0288D1</color>
+    <color name="dark_swipe_color_2">#0277BD</color>
+    <color name="dark_button_background">#212121</color>
+    <color name="dark_button_text">#FFFFFF</color>
+    <color name="dark_nav_bar_background_color">#212121</color>
+    <color name="dark_nav_button_background_color">#424242</color>
+    <color name="dark_main_background_color">#212121</color>
+    <color name="dark_dialog_text_color">#FFFFFF</color>
+
+      <!-- Ocean Theme -->
+    <color name="ocean_background">#00695C</color>
+    <color name="ocean_background_alt">#00897B</color>
+    <color name="ocean_text">#E0F7FA</color>
+    <color name="ocean_text_color">#E0F7FA</color>
+    <color name="ocean_swipe_color_1">#4DD0E1</color>
+    <color name="ocean_swipe_color_2">#26A69A</color>
+    <color name="ocean_button_background">#263238</color>
+    <color name="ocean_button_text">#B0BEC5</color>
+    <color name="ocean_nav_bar_background_color">#00695C</color>
+    <color name="ocean_nav_button_background_color">#00897B</color>
+    <color name="ocean_main_background_color">#00695C</color>
+    <color name="ocean_dialog_text_color">#E0F7FA</color>
+
+    <!-- Forest Theme -->
+    <color name="forest_background">#1B5E20</color>
+    <color name="forest_background_alt">#2E7D32</color>
+    <color name="forest_text">#E8F5E9</color>
+    <color name="forest_text_color">#E8F5E9</color>
+    <color name="forest_swipe_color_1">#4CAF50</color>
+    <color name="forest_swipe_color_2">#388E3C</color>
+    <color name="forest_button_background">#2E7D32</color>
+    <color name="forest_button_text">#B2DFDB</color>
+    <color name="forest_nav_bar_background_color">#1B5E20</color>
+    <color name="forest_nav_button_background_color">#2E7D32</color>
+    <color name="forest_main_background_color">#1B5E20</color>
+    <color name="forest_dialog_text_color">#E8F5E9</color>
+
+    <!-- Sunset Theme -->
+    <color name="sunset_background">#D84315</color>
+    <color name="sunset_background_alt">#F4511E</color>
+    <color name="sunset_text">#FFF3E0</color>
+    <color name="sunset_text_color">#FFF3E0</color>
+    <color name="sunset_swipe_color_1">#FF8A65</color>
+    <color name="sunset_swipe_color_2">#FF7043</color>
+    <color name="sunset_button_background">#FF6F00</color>
+    <color name="sunset_button_text">#212121</color>
+    <color name="sunset_nav_bar_background_color">#D84315</color>
+    <color name="sunset_nav_button_background_color">#F4511E</color>
+    <color name="sunset_main_background_color">#D84315</color> <!-- Added -->
+    <color name="sunset_dialog_text_color">#FFF3E0</color> <!-- Added -->
+
+    <!-- UI Elements -->
+    <color name="url_edittext_background">#FFFFFF</color>
+    <color name="url_edittext_text">#FF000000</color>
+    <color name="url_edittext_hint">#7F8C8D</color>
+    <color name="gradient_start">#2C3E50</color>
+    <color name="gradient_end">#34495E</color>
+</resources>
