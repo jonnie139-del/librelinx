@@ -1,0 +1,24 @@
+# Gradle build folders
+.gradle/
+build/
+*/build/
+
+# Local configuration
+local.properties
+
+# Keystore files (never push!)
+*.jks
+
+# Logs
+*.log
+
+# App outputs
+*.apk
+*.aab
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
