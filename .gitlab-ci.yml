@@ -7,36 +7,42 @@ variables:
   GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
 
 before_script:
-  - chmod +x ./gradlew
+  # Ensure gradle is in PATH if using system gradle
+  - export PATH="$CI_PROJECT_DIR/gradlew:$PATH"
 
-build_app:
+# Build Lite module
+build_lite:
   stage: build
   image: openjdk:11
   script:
-    - ./gradlew :lite:assembleRelease
+    - gradle :lite:assembleRelease
   artifacts:
     paths:
-      - lite/build/outputs/
+      - Lite/build/outputs/apk/
+    expire_in: 1 week
 
+# Lint stage
 lint_checks:
   stage: lint
   image: openjdk:11
   script:
-    - ./gradlew :lite:lint
-    - ./gradlew :lite:fdroidLint || true
-    - ./gradlew :lite:checkUpdates || true
+    - gradle :lite:lint
+    - gradle :lite:fdroidLint
+    - gradle :lite:checkUpdates
   artifacts:
     paths:
-      - lite/build/reports/
-      - lite/build/outputs/lint-results.xml
+      - Lite/build/reports/
+      - Lite/build/outputs/lint-results.xml
+    expire_in: 1 week
 
+# Code quality stage
 codequality:
   stage: codequality
   image: stedolan/jq:latest
   script:
     - echo "Generating codequality.json..."
     - shopt -s nullglob
-    - json_files=(lite/build/reports/**/*.json)
+    - json_files=(Lite/build/reports/**/*.json)
     - if [ ${#json_files[@]} -gt 0 ]; then
         jq '[.[]|.[]]' --slurp "${json_files[@]}" > codequality.json;
       else
@@ -46,3 +52,4 @@ codequality:
   artifacts:
     paths:
       - codequality.json
+    expire_in: 1 week
