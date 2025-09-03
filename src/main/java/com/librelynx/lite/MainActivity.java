@@ -1592,7 +1592,7 @@ private String createWorkingCSS(String url) {
                 .setPositiveButton("Visit Store", (dialog, which) -> {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse("https://librelynx.online"));
+                        intent.setData(Uri.parse("https://librelynx.website"));
                         startActivity(intent);
                         Log.d("ProUpgradeDialog", "Opened store URL");
                     } catch (Exception e) {
